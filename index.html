@@ -4,61 +4,270 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Александр Богданов — Product Manager</title>
-
   <style>
+    :root {
+      --text: #1f2937;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --bg: #f9fafb;
+      --card: #ffffff;
+      --border: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f3f4f6;
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
     }
 
     .container {
-      max-width: 900px;
-      margin: 40px auto;
-      background: #ffffff;
-      padding: 32px;
-      border-radius: 12px;
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 32px 20px 80px;
+    }
+
+    header {
+      margin-bottom: 32px;
     }
 
     h1 {
-      margin-top: 0;
+      font-size: 32px;
+      margin: 0;
+      line-height: 1.2;
     }
 
     .subtitle {
-      color: #555;
-      margin-bottom: 16px;
+      font-size: 18px;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    .contacts {
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+      font-size: 14px;
+    }
+
+    .contacts a {
+      color: var(--accent);
+      text-decoration: none;
     }
 
     section {
-      margin-top: 32px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+
+    section h2 {
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-size: 20px;
+    }
+
+    .about {
+      font-size: 15px;
+    }
+
+    .job {
+      margin-bottom: 24px;
+    }
+
+    .job:last-child {
+      margin-bottom: 0;
+    }
+
+    .job-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .job-title {
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .job-company {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .job-period {
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    ul {
+      margin: 12px 0 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .tools, .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      background: #eef2ff;
+      color: #1e40af;
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-size: 13px;
+    }
+
+    .education-item {
+      margin-bottom: 12px;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
     }
   </style>
 </head>
 <body>
-
   <div class="container">
-    <h1>Александр Богданов</h1>
-    <div class="subtitle">Product Manager • Project Manager</div>
 
-    <p>📍 Ижевск (готов к переезду) • 💰 230 000 ₽ • 📞 +7 950 163-06-56</p>
+    <header>
+      <h1>Александр Богданов</h1>
+      <div class="subtitle">Product Manager • Project Manager</div>
+
+      <div class="contacts">
+        <span>📍 Ижевск (готов к переезду)</span>
+        <span>💰 230 000 ₽ на руки</span>
+        <a href="tel:+79501630656">📞 +7 950 163-06-56</a>
+        <a href="mailto:alexasiva@yandex.ru">✉️ alexasiva@yandex.ru</a>
+        <a href="https://t.me/alexasiva1" target="_blank">💬 Telegram</a>
+      </div>
+    </header>
 
     <section>
       <h2>Обо мне</h2>
-      <p>
+      <p class="about">
         Я менеджер, который соединяет бизнес-цели, продукт и команду.
-        Работаю с продуктами полного цикла: от идеи до роста метрик.
+        Работаю с продуктами полного цикла: от идеи и требований до релиза и роста метрик.
+        Мой фокус — результат в цифрах, скорость delivery и понятные процессы.
       </p>
     </section>
 
     <section>
       <h2>Опыт работы</h2>
-      <ul>
-        <li><strong>Raberu</strong> — Product Manager (2025 — н.в.)</li>
-        <li><strong>Under NDA</strong> — Product Manager (2024–2025)</li>
-        <li><strong>DST Global</strong> — Project Manager (2021–2023)</li>
-      </ul>
-    </section>
-  </div>
 
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-title">Product Manager</div>
+            <div class="job-company">Raberu — HR-tech платформа</div>
+          </div>
+          <div class="job-period">Июль 2025 — настоящее время</div>
+        </div>
+        <ul>
+          <li>Разработал стратегию монетизации → +25% средний чек</li>
+          <li>Перезапустил онбординг → +40% завершённых профилей, −45% bounce rate</li>
+          <li>Редизайн ключевых интерфейсов → +35 пунктов NPS</li>
+          <li>Кросс-селлинг → +15% ARPU, +28% retention</li>
+          <li>Оптимизация воронки → −30% CAC, +65% активных вакансий</li>
+        </ul>
+        <div class="tools">
+          <span class="tag">SQL</span>
+Telegram
+Александр Богданов
+
+SEND MESSAGE
+<span class="tag">Яндекс.Метрика</span>
+          <span class="tag">Figma</span>
+          <span class="tag">Jira</span>
+          <span class="tag">Notion</span>
+          <span class="tag">CRM</span>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-title">Product Manager</div>
+            <div class="job-company">Under NDA — государственный digital-продукт</div>
+          </div>
+          <div class="job-period">Ноябрь 2024 — Июль 2025</div>
+        </div>
+        <ul>
+          <li>Ребрендинг национального туристического маршрута</li>
+          <li>Запуск цифровых продуктов (AR-квесты, интерактив)</li>
+          <li>Сегментация ЦА и корректировка продуктовой стратегии</li>
+          <li>Координация 5+ кросс-функциональных команд</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-title">Project Manager</div>
+            <div class="job-company">DST Global — Digital / B2B</div>
+          </div>
+          <div class="job-period">Июль 2021 — Ноябрь 2023</div>
+        </div>
+        <ul>
+          <li>Внедрил сквозную аналитику (LTV, CAC, конверсии)</li>
+          <li>Настроил приоритизацию бэклога → −40% time-to-MVP</li>
+          <li>Внедрил OKR → 85% выполнения целей</li>
+          <li>Автоматизировал 60% операций продаж через CRM</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <section>
+      <h2>Навыки</h2>
+      <div class="skills">
+        <span class="tag">Product Management</span>
+        <span class="tag">Unit-экономика</span>
+        <span class="tag">CustDev</span>
+        <span class="tag">Roadmap</span>
+        <span class="tag">A/B тесты</span>
+        <span class="tag">SQL</span>
+        <span class="tag">Scrum / Kanban</span>
+        <span class="tag">B2B / B2C</span>
+        <span class="tag">CRM</span>
+        <span class="tag">Управление командой</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Образование</h2>
+      <div class="education-item">
+        <strong>ИжГТУ им. М.Т. Калашникова</strong><br />
+        Менеджмент, управление персоналом — 2023
+      </div>
+      <div class="education-item">
+        <strong>ИжГТУ им. М.Т. Калашникова</strong><br />
+        Менеджмент, продажи — 2020
+      </div>
+    </section>
+
+    <footer>
+      Обновлено 12 января 2026
+    </footer>
+
+  </div>
 </body>
 </html>
